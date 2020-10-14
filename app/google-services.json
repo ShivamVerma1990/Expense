@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "885244338478",
+    "firebase_url": "https://expense-track-5da2a.firebaseio.com",
+    "project_id": "expense-track-5da2a",
+    "storage_bucket": "expense-track-5da2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885244338478:android:7cc10375fb69bc38055abf",
+        "android_client_info": {
+          "package_name": "com.candroid.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885244338478-ge11je027t8akq4hnlvtdg5r8c0ajh6f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.candroid.myapplication",
+            "certificate_hash": "4f1aa2f7e289acc3224e35fbb6edbedb1e9aab43"
+          }
+        },
+        {
+          "client_id": "885244338478-f6l176ta5sa8731m4hkeug8uc0ma7p3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1TwSBpscLpT9Z6bzuuMV4BLNRhl320Co"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885244338478-f6l176ta5sa8731m4hkeug8uc0ma7p3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
