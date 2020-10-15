@@ -60,22 +60,30 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="layoutResourceFile" />
+        <option value="resourceFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1ir9vGZBckFkKeT4b6Zzdf7goGY" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/menu" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.candroid.myapplication" />
+    </key>
     <key name="android.template.packageName">
+      <recent name="com.candroid.myapplication.Activity" />
       <recent name="com.candroid.myapplication" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Shivam\Company\Working\MyApplication\app\src\main\res\menu" />
       <recent name="F:\Shivam\Company\Working\MyApplication\app" />
       <recent name="F:\Shivam\Company\Working\MyApplication\app\src\main\res" />
       <recent name="F:\Shivam\Company\Working\MyApplication\app\src\main\res\layout" />

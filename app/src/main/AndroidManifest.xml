@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.candroid.myapplication"
-    >
-<uses-permission android:name="android.permission.INTERNET"/>
+    package="com.candroid.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DashActivity"></activity>
+        <activity android:name=".Activity.AboutActivity"></activity>
+        <activity android:name=".Activity.HomeActivity" />
+        <activity android:name=".ForgotActivity" />
+        <activity android:name=".DashActivity" />
         <activity
             android:name=".RegisterActivity"
             android:parentActivityName=".MainActivity" />
@@ -21,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".MyMessagingService"
             android:exported="false">
@@ -28,7 +33,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

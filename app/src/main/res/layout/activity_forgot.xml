@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
-        android:text="Already Have an Account? "
+        android:text="RESET YOUR PASSWORD HERE!!"
         android:textAllCaps="true"
         android:textColor="#ffffff"
         android:textColorLink="#FFFFFF"
@@ -53,43 +53,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inputEmails"
-android:maxLength="30"
+        android:id="@+id/inputEmailFor"
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="284dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/round"
         android:drawableStart="@drawable/ic_email_black_24dp"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:background="@drawable/round"
-        android:hint="Email"
+        android:hint="Enter yor email"
         android:inputType="text"
         android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/topView" />
-
-    <EditText
-        android:id="@+id/editLock"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="16dp"
-        android:ems="10"
-        android:hint="Password"
-        android:background="@drawable/round"
-        android:inputType="textPassword"
-        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmails" />
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        app:layout_constraintVertical_bias="0.135" />
 
     <Button
         android:id="@+id/button"
@@ -97,41 +80,15 @@ android:maxLength="30"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:text="LOGIN"
-        android:textColor="#ffffff"
+        android:layout_marginBottom="204dp"
         android:background="@drawable/round_cool"
+        android:text="RESET"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editLock"
-        app:layout_constraintVertical_bias="0.048" />
-
-    <TextView
-        android:id="@+id/textPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:text="FORGOT PASSWORD?"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-    <TextView
-        android:id="@+id/textReg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="NEW USER? REGISTER NOW!"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.502" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

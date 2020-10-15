@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/inputEmails"
 
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="144dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round"
         android:drawableStart="@drawable/ic_lock"
@@ -92,7 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEmails" />
 
     <Button
         android:id="@+id/button"
@@ -107,24 +107,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editLock"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.732" />
 
     <TextView
         android:id="@+id/txySing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="528dp"
         android:padding="16dp"
         android:text="Already Have an Account? Sing in Here!!"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/topView" />
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -140,6 +140,44 @@
 
         app:titleMarginEnd="23dp"
         />
+
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round"
+        android:drawableStart="@drawable/ic_person_black_24dp"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Enter  your Age"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <EditText
+        android:id="@+id/etFull"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round"
+        android:drawableStart="@drawable/ic_info_black_24dp"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Enter your Name"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

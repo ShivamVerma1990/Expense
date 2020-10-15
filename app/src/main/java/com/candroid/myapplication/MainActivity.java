@@ -19,24 +19,52 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
-private Button button;
-private TextView textReg;
-   private EditText editLock;
+    private EditText editLock;
    private EditText inputEmail;
 private FirebaseAuth mAuth;
+SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        sharedPreferences  = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE);
+
+Boolean isLog=sharedPreferences.getBoolean("isLog",false);
         setContentView(R.layout.activity_main);
-textReg=findViewById(R.id.textReg);
-button=findViewById(R.id.button);
+
+        if(isLog){
+            startActivity(new Intent(getApplicationContext(), DashActivity.class));
+
+
+            finish();
+
+        }
+        TextView textReg = findViewById(R.id.textReg);
+        Button button = findViewById(R.id.button);
 editLock=findViewById(R.id.editLock);
-inputEmail=findViewById(R.id.inputEmail);
+inputEmail=findViewById(R.id.inputEmails);
 mAuth=FirebaseAuth.getInstance();
+
+
+        TextView textPass=findViewById(R.id.textPass);
+
+
+
+textPass.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(getApplicationContext(),ForgotActivity.class));
+        overridePendingTransition(R.anim.slide_in_r,R.anim.slide_out_l);
+    }
+});
+
 Notification();
+
+//Login button and firebase code
 button.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
@@ -55,8 +83,18 @@ mAuth.signInWithEmailAndPassword(n,m).addOnCompleteListener(new OnCompleteListen
     @Override
     public void onComplete(@NonNull Task<AuthResult> task) {
         if(task.isSuccessful()){
-            startActivity(new Intent(getApplicationContext(),DashActivity.class));
+            FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        if(user.isEmailVerified()) {
+            Shared();
+            startActivity(new Intent(getApplicationContext(), DashActivity.class));
+finish();
+        }
+        else{
+            user.sendEmailVerification();
 
+            Toast.makeText(MainActivity.this,"please check you verification",Toast.LENGTH_SHORT).show();
+
+        }
         }
     else{
             Toast.makeText(MainActivity.this,"no",Toast.LENGTH_SHORT).show();
@@ -72,6 +110,7 @@ mAuth.signInWithEmailAndPassword(n,m).addOnCompleteListener(new OnCompleteListen
 
     }
 });
+//click listener on register
 textReg.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
@@ -82,7 +121,11 @@ textReg.setOnClickListener(new View.OnClickListener() {
 });
 
     }
-public void Notification(){
+
+
+
+    //here we create our notification
+    public void Notification(){
     if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O) {
 
         NotificationChannel channel= new NotificationChannel("MyNotification","MyNotification", NotificationManager.IMPORTANCE_DEFAULT);
@@ -105,6 +148,11 @@ public void Notification(){
 
 
 }
+
+    public  void Shared(){
+
+        sharedPreferences.edit().putBoolean("isLog",true).apply();
+    }
 }
 
 

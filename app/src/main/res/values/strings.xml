@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="pref_name">PREFRENCE</string>
+    <string name="save_expenses">Save Expenses</string>
 </resources>
