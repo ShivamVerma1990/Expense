@@ -44,7 +44,9 @@ editLock=findViewById(R.id.editLock);
         etFull=findViewById(R.id.etFull);
 
         button=findViewById(R.id.button);
-button.setOnClickListener(new View.OnClickListener() {
+
+       
+       button.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
 final String Pass=editLock.getText().toString().trim();
@@ -52,7 +54,9 @@ final String Pass=editLock.getText().toString().trim();
 
 final String age=editAge.getText().toString().trim();
 final String name=etFull.getText().toString().trim();
-        if (email.isEmpty()){
+       
+       //here we provide some validation
+       if (email.isEmpty()){
             Toast.makeText(RegisterActivity.this,"please fill all the requirment information",Toast.LENGTH_SHORT).show();
             inputEmail.setError("Please fill this email");
 
@@ -98,30 +102,22 @@ inputEmail.requestFocus();
         }
 
 //progressBar.setVisibility(View.VISIBLE);
+       
+       //Here we create user email or password
        mAuth.createUserWithEmailAndPassword(email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
            @Override
            public void onComplete(@NonNull Task<AuthResult> task) {
-
+//condition to check that task is successful or not
                if(task.isSuccessful()){
-User user=new User(email,age,name);
-FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-    @Override
-    public void onComplete(@NonNull Task<Void> task) {
-   if(task.isSuccessful()){
-       Toast.makeText(RegisterActivity.this,"yes",Toast.LENGTH_SHORT).show();
-  // progressBar.setVisibility(View.GONE);
-   }
-   else{
-       Toast.makeText(RegisterActivity.this,"no",Toast.LENGTH_SHORT).show();
+       Toast.makeText(RegisterActivity.this,"You Are Successfully  Register Your Account",Toast.LENGTH_SHORT).show();
 
    }
 
-    }
-});
 
-               }
+
+
            else{
-                   Toast.makeText(RegisterActivity.this,"noo",Toast.LENGTH_SHORT).show();
+                   Toast.makeText(RegisterActivity.this,"This Account is Already Register!",Toast.LENGTH_SHORT).show();
 
 
                }
@@ -131,20 +127,23 @@ FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInsta
 
     }
 });
+       //Here we call toolbar function
 setToolbar();
     }
+
+   
+   
+
+
+//here we provide some animation functionality
 @Override
-
-
-
-
     public void finish()
 {
     super.finish();
     overridePendingTransition(R.anim.slide_in_l,R.anim.slide_out_r);}
 
 
-//here
+//here we create our toolbar
 public  void setToolbar(){
         setSupportActionBar(toolbar2);
         getSupportActionBar().setTitle("Back");
@@ -152,3 +151,4 @@ public  void setToolbar(){
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 }
 }
+
